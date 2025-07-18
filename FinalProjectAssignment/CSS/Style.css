@@ -92,6 +92,7 @@ header h1 {
   height: auto;
   border-radius: 8px;
   object-fit: contain;
+  margin-left: 20px;
 }
 
 /* Tabelas */
