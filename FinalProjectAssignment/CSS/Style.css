@@ -103,6 +103,7 @@ header h1 {
 }
 
 /* New styles for equipment-essential image + texts */
+/* This is key to have one image beside two text blocks */
 .equipment-essential {
   display: flex;
   align-items: flex-start;
