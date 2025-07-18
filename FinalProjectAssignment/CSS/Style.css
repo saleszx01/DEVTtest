@@ -97,6 +97,30 @@ header h1 {
   margin-left: 20px;
 }
 
+/* New styles for equipment-essential image + texts */
+.equipment-essential {
+  display: flex;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+.equipment-texts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.equipment-essential img {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  margin-left: 0; /* reset margin as image is now beside texts */
+}
+
 /* Tables */
 table {
   width: 90%;
