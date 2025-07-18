@@ -1,3 +1,4 @@
+/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +26,7 @@ header h1 {
   margin-bottom: 10px;
 }
 
-/* Navegação */
+/* Navigation */
 .nav-list {
   list-style: none;
   display: flex;
@@ -47,7 +48,7 @@ header h1 {
   background-color: firebrick;
 }
 
-/* Intro geral */
+/* Intro for index */
 .intro {
   max-width: 800px;
   margin: 30px auto;
@@ -62,7 +63,7 @@ header h1 {
   margin-bottom: 20px;
 }
 
-/* Listas principais */
+/* Equipment list for getting started */
 .equipment-list {
   list-style-type: none;
   padding-left: 0;
@@ -80,13 +81,14 @@ header h1 {
   border-left: 4px solid #4B0000;
   gap: 20px;
   border-radius: 8px;
+  flex-wrap: wrap;
 }
 
 .equipment-item span {
   flex: 1;
+  min-width: 200px;
 }
 
-/* Estilo das imagens */
 .equipment-item img {
   width: 180px;
   height: auto;
@@ -95,7 +97,7 @@ header h1 {
   margin-left: 20px;
 }
 
-/* Tabelas */
+/* Tables */
 table {
   width: 90%;
   margin: 20px auto;
@@ -120,7 +122,7 @@ th {
   background-color: lightgray;
 }
 
-/* Formulários */
+/* Forms */
 form {
   max-width: 600px;
   margin: 30px auto;
@@ -158,7 +160,7 @@ form button:hover {
   background-color: firebrick;
 }
 
-/* Flex e Grid */
+/* Flex and Grid utilities */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -173,7 +175,7 @@ form button:hover {
   padding: 20px;
 }
 
-/* Rodapé */
+/* Footer */
 footer {
   background-color: #4B0000;
   color: white;
@@ -182,7 +184,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Acessibilidade */
+/* Accessibility */
 img[alt] {
   outline: none;
 }
