@@ -181,6 +181,15 @@ img[alt] {
   outline: none;
 }
 
+/* For Images Inline */
+.inline-img {
+  float: right;
+  max-width: 150px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
 :focus {
   outline: 2px dashed firebrick;
   outline-offset: 2px;
