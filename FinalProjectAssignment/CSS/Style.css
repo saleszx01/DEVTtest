@@ -102,8 +102,7 @@ header h1 {
   margin-left: 20px;
 }
 
-/* New styles for equipment-essential image + texts */
-/* This is key to have one image beside two text blocks */
+/* Equipment text beside image */
 .equipment-essential {
   display: flex;
   align-items: flex-start;
@@ -124,7 +123,7 @@ header h1 {
   height: auto;
   border-radius: 8px;
   object-fit: contain;
-  margin-left: 0; /* reset margin as image is now beside texts */
+  margin-left: 0;
 }
 
 /* Tables */
@@ -235,5 +234,33 @@ img[alt] {
     max-width: 280px;
     height: auto;
     margin-left: 0;
+  }
+}
+
+/* --------------------- */
+/* Custom CSS for Basics */
+/* --------------------- */
+
+/* Grid layout for The-Basics image + text sections */
+.basics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: center;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.basics-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Responsive stacking for mobile */
+@media (max-width: 700px) {
+  .basics-grid {
+    grid-template-columns: 1fr;
   }
 }
