@@ -1,10 +1,9 @@
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -13,7 +12,7 @@ body {
   padding: 0 20px;
 }
 
-/* Header Styling */
+/* Header */
 header {
   background-color: #4B0000;
   color: white;
@@ -26,7 +25,7 @@ header h1 {
   margin-bottom: 10px;
 }
 
-/* Navigation */
+/* Navegação */
 .nav-list {
   list-style: none;
   display: flex;
@@ -48,7 +47,7 @@ header h1 {
   background-color: firebrick;
 }
 
-/* Intro Section */
+/* Intro geral */
 .intro {
   max-width: 800px;
   margin: 30px auto;
@@ -63,33 +62,39 @@ header h1 {
   margin-bottom: 20px;
 }
 
-/* Lists */
-.intro ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  text-align: left;
-  display: inline-block;
-}
-
-/* Complex Lists */
-.list-simple, .list-complex {
-  padding: 10px 20px;
+/* Listas principais */
+.equipment-list {
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 800px;
   margin: 20px auto;
-  max-width: 600px;
+}
+
+.equipment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
   border-left: 4px solid #4B0000;
+  gap: 20px;
+  border-radius: 8px;
 }
 
-.list-complex ul li {
-  margin-bottom: 8px;
+.equipment-item span {
+  flex: 1;
 }
 
-.list-complex ul ul {
-  padding-left: 20px;
-  list-style-type: circle;
+/* Estilo das imagens */
+.equipment-item img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
-/* Tables */
+/* Tabelas */
 table {
   width: 90%;
   margin: 20px auto;
@@ -114,7 +119,7 @@ th {
   background-color: lightgray;
 }
 
-/* Forms */
+/* Formulários */
 form {
   max-width: 600px;
   margin: 30px auto;
@@ -152,7 +157,7 @@ form button:hover {
   background-color: firebrick;
 }
 
-/* Grid and Flexbox Examples */
+/* Flex e Grid */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -167,7 +172,7 @@ form button:hover {
   padding: 20px;
 }
 
-/* Footer */
+/* Rodapé */
 footer {
   background-color: #4B0000;
   color: white;
@@ -176,18 +181,9 @@ footer {
   margin-top: 40px;
 }
 
-/* Accessibility */
+/* Acessibilidade */
 img[alt] {
   outline: none;
-}
-
-/* For Images Inline */
-.inline-img {
-  float: right;
-  max-width: 150px;
-  margin-left: 15px;
-  margin-bottom: 10px;
-  border-radius: 8px;
 }
 
 :focus {
