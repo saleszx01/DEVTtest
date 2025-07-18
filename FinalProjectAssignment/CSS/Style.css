@@ -220,7 +220,7 @@ img[alt] {
 }
 
 :focus {
-  outline: 2px dashed firebrick;
+  outline: 2px solid #ccc;
   outline-offset: 2px;
 }
 
