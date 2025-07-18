@@ -70,6 +70,102 @@ header h1 {
   display: inline-block;
 }
 
+/* Complex Lists */
+.list-simple, .list-complex {
+  padding: 10px 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #fff;
+  border-left: 4px solid #1a1a1a;
+}
+
+.list-complex ul li {
+  margin-bottom: 8px;
+}
+
+.list-complex ul ul {
+  padding-left: 20px;
+  list-style-type: circle;
+}
+
+/* Tables */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table caption {
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #eee;
+}
+
+/* Forms */
+form {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input, form textarea, form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #333;
+}
+
+/* Grid and Flexbox Examples */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
 /* Footer */
 footer {
   background-color: #1a1a1a;
@@ -77,4 +173,14 @@ footer {
   text-align: center;
   padding: 15px 0;
   margin-top: 40px;
+}
+
+/* Accessibility */
+img[alt] {
+  outline: none;
+}
+
+:focus {
+  outline: 2px dashed #444;
+  outline-offset: 2px;
 }
