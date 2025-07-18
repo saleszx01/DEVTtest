@@ -26,6 +26,11 @@ header h1 {
   margin-bottom: 10px;
 }
 
+/* Force Centered Heading */
+.centered-heading {
+  text-align: center;
+}
+
 /* Navigation */
 .nav-list {
   list-style: none;
