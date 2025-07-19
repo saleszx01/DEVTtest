@@ -179,19 +179,21 @@ img[alt] {
 /* The Basics page grid */
 .basics-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;  /* Two equal columns */
-  grid-template-rows: auto;
-  column-gap: 30px;
-  row-gap: 20px;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px 20px;
   max-width: 900px;
   margin: 40px auto;
+  align-items: center;
 }
 
 .basics-grid article {
   font-size: 1em;
   line-height: 1.5;
   color: #222;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fef7e0;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
 }
 
 .basics-grid figure {
@@ -214,13 +216,23 @@ img[alt] {
   font-style: italic;
 }
 
+/* Fundo para parágrafos do The Basics */
+.content-bg {
+  background-color: #fef7e0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 20px auto;
+  color: #222;
+  line-height: 1.5;
+}
+
 /* Responsive adjustments */
 @media (max-width: 700px) {
   .basics-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    column-gap: 0;
-    row-gap: 15px;
+    grid-gap: 20px 15px;
   }
 
   .equipment-essential {
@@ -236,12 +248,11 @@ img[alt] {
 
   .equipment-list .equipment-item {
     flex-direction: column;
-    align-items: flex-start;
   }
 
   .equipment-list .equipment-item img {
     max-width: 100%;
     width: 180px;
-    margin: 10px 0 0 0;
+    margin-top: 10px;
   }
 }
