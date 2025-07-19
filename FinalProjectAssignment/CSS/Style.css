@@ -237,41 +237,43 @@ img[alt] {
   }
 }
 
-/* --------------------- */
-/* Custom CSS for Basics */
-/* --------------------- */
+/* Custom CSS for The Basics page */
 
-/* Grid layout for The-Basics image + text sections */
+/* Grid container with explicit grid-template-columns, rows and gaps */
 .basics-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-  align-items: center;
+  grid-template-columns: 1fr 1fr;       /* two equal columns */
+  grid-template-rows: auto;             /* rows auto size */
+  grid-column-gap: 30px;                /* horizontal gap between columns */
+  grid-row-gap: 20px;                   /* vertical gap between rows */
+  align-items: center;                  /* vertically center items in cells */
   max-width: 900px;
   margin: 40px auto;
 }
 
-/* Image styling inside basics grid */
-.basics-grid img {
+/* Images style */
+.basics-grid figure img {
   width: 100%;
-  max-width: 320px; /* limit max width */
   height: auto;
   border-radius: 8px;
   object-fit: contain;
-  justify-self: center;
 }
 
-/* Text container inside grid */
-.basics-grid > div {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #222;
+/* Caption style */
+.basics-grid figure figcaption {
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+  margin-top: 5px;
+  font-style: italic;
 }
 
-/* Responsive stacking for mobile */
+/* Responsive: Stack in one column for smaller screens */
 @media (max-width: 700px) {
   .basics-grid {
-    grid-template-columns: 1fr;
-    margin: 20px;
+    grid-template-columns: 1fr;       /* single column */
+    grid-template-rows: auto auto;   /* two rows */
+    grid-column-gap: 0;
+    grid-row-gap: 15px;
   }
 }
