@@ -1,4 +1,4 @@
-/* Reset and Base */
+/* Organize all text */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ body {
   padding: 0 20px;
 }
 
-/* Header */
+/* Headers1 */
 header {
   background-color: #4B0000;
   color: white;
@@ -26,7 +26,7 @@ header h1 {
   margin-bottom: 10px;
 }
 
-/* Navigation */
+/* Navigation List on the top of the page */
 .nav-list {
   list-style: none;
   display: flex;
@@ -50,7 +50,7 @@ header h1 {
   outline: none;
 }
 
-/* Footer */
+/* Footer on the bottom of the pages */
 footer {
   background-color: #4B0000;
   color: white;
@@ -59,7 +59,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Accessibility */
+/* Image and Navigation Accessibility Settings */
 img[alt] {
   outline: none;
 }
@@ -69,12 +69,12 @@ img[alt] {
   outline-offset: 2px;
 }
 
-/* Centered text helper */
+/* Force Centered Text */
 .centered {
   text-align: center;
 }
 
-/* Intro sections - for main page */
+/* Intro for the main page */
 .intro {
   max-width: 800px;
   margin: 30px auto;
@@ -117,7 +117,7 @@ img[alt] {
   color: #222;
 }
 
-/* Images in equipment-essential */
+/* Images in Getting Started page */
 .equipment-essential img {
   flex: 1 1 280px;
   max-width: 280px;
@@ -152,7 +152,7 @@ img[alt] {
   object-fit: contain;
 }
 
-/* Links in "Where to Buy" section */
+/* Links in Getting Started page */
 .centered ul {
   list-style-type: none;
   padding-left: 0;
@@ -176,7 +176,7 @@ img[alt] {
   outline: none;
 }
 
-/* The Basics page grid with explicit grid properties */
+/* The Basics page CSS Grid */
 .basics-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -201,7 +201,7 @@ img[alt] {
   display: block;
 }
 
-/* Special grid for single column content with gap */
+/* Special Grid for the Column */
 .basics-grid-single {
   display: grid;
   grid-template-columns: 1fr;
@@ -211,7 +211,7 @@ img[alt] {
   margin: 40px auto;
 }
 
-/* Background for content */
+/* Background */
 .content-bg {
   background-color: #fef7e0;
   padding: 15px;
@@ -221,14 +221,14 @@ img[alt] {
   line-height: 1.5;
 }
 
-/* Lists with numbers fully inside background */
+/* Force numbers into the background */
 .numbers-in-bg {
   list-style-position: inside;
   padding-left: 1.2em;
   margin-bottom: 1em;
 }
 
-/* Responsive */
+/* Responsible for screen size changes */
 @media (max-width: 700px) {
   .basics-grid {
     grid-template-columns: 1fr;
@@ -264,7 +264,7 @@ img[alt] {
   }
 }
 
-/* Practice Schedule Table - Complex Table Styling */
+/* Practice Schedule Table */
 .practice-schedule {
   max-width: 1000px;
   margin: 40px auto;
@@ -320,7 +320,7 @@ img[alt] {
   }
 }
 
-/* Lista simples e complexa com aninhamento */
+/* Simple and Complex Lists */
 
 .simple-list {
   list-style-type: disc;
@@ -359,6 +359,8 @@ img[alt] {
 .complex-list li ul li {
   margin-bottom: 8px;
 }
+
+/* Responsible for screen size changes (lists) */
 
 @media (max-width: 700px) {
   .simple-list,
