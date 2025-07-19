@@ -26,11 +26,6 @@ header h1 {
   margin-bottom: 10px;
 }
 
-/* Force Centered */
-.centered {
-  text-align: center;
-}
-
 /* Navigation */
 .nav-list {
   list-style: none;
@@ -53,157 +48,6 @@ header h1 {
   background-color: firebrick;
 }
 
-/* Intro for index */
-.intro {
-  max-width: 800px;
-  margin: 30px auto;
-  text-align: center;
-}
-
-.intro img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-/* Equipment list for getting started */
-.equipment-list {
-  list-style-type: none;
-  padding-left: 0;
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-.equipment-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: #f5e6dc;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-left: 4px solid #4B0000;
-  gap: 20px;
-  border-radius: 8px;
-  flex-wrap: wrap;
-}
-
-.equipment-item span {
-  flex: 1;
-  min-width: 200px;
-}
-
-.equipment-item img {
-  width: 180px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: contain;
-  margin-left: 20px;
-}
-
-/* Equipment text beside image */
-.equipment-essential {
-  display: flex;
-  align-items: flex-start;
-  max-width: 800px;
-  margin: 20px auto;
-  gap: 20px;
-}
-
-.equipment-texts {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.equipment-essential img {
-  width: 280px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: contain;
-  margin-left: 0;
-}
-
-/* Tables */
-table {
-  width: 90%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background-color: white;
-  box-shadow: 0 0 10px gray;
-}
-
-table caption {
-  font-weight: bold;
-  margin: 10px;
-  text-align: center;
-}
-
-td, th {
-  border: 1px solid lightgray;
-  padding: 10px;
-  text-align: left;
-}
-
-th {
-  background-color: lightgray;
-}
-
-/* Forms */
-form {
-  max-width: 600px;
-  margin: 30px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px gray;
-}
-
-form label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-form input, form textarea, form select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid silver;
-  border-radius: 4px;
-}
-
-form button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #4B0000;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: firebrick;
-}
-
-/* Flex and Grid utilities */
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
 /* Footer */
 footer {
   background-color: #4B0000;
@@ -223,57 +67,57 @@ img[alt] {
   outline-offset: 2px;
 }
 
-/* Responsive fix for equipment-essential image on small screens */
-@media (max-width: 600px) {
-  .equipment-essential {
-    flex-direction: column;
-    align-items: center;
-  }
-  .equipment-essential img {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    margin-left: 0;
-  }
-}
-
+/* --------------------------- */
 /* Custom CSS for The Basics page */
+/* --------------------------- */
 
-/* Grid container with explicit grid-template-columns, rows and gaps */
+/* Basics grid container uses grid-template-columns and grid-template-rows */
 .basics-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;       /* two equal columns */
-  grid-template-rows: auto;             /* rows auto size */
-  grid-column-gap: 30px;                /* horizontal gap between columns */
-  grid-row-gap: 20px;                   /* vertical gap between rows */
-  align-items: center;                  /* vertically center items in cells */
+  grid-template-columns: 1fr 1fr;  /* Two equal columns */
+  grid-template-rows: auto;        /* Rows adjust height automatically */
+  column-gap: 30px;                /* Space between columns */
+  row-gap: 20px;                  /* Space between rows */
+  align-items: center;             /* Vertically center grid items */
   max-width: 900px;
   margin: 40px auto;
 }
 
-/* Images style */
+/* Article text styling */
+.basics-grid article {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #222;
+}
+
+/* Figure and images styling */
+.basics-grid figure {
+  margin: 0; /* Remove default figure margin */
+}
+
 .basics-grid figure img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   object-fit: contain;
+  display: block;
 }
 
-/* Caption style */
+/* Figcaption styling */
 .basics-grid figure figcaption {
   font-size: 0.9em;
   color: #555;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 6px;
   font-style: italic;
 }
 
-/* Responsive: Stack in one column for smaller screens */
+/* Responsive: Stack content vertically on small screens */
 @media (max-width: 700px) {
   .basics-grid {
-    grid-template-columns: 1fr;       /* single column */
-    grid-template-rows: auto auto;   /* two rows */
-    grid-column-gap: 0;
-    grid-row-gap: 15px;
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-rows: auto auto; /* Two rows */
+    column-gap: 0;
+    row-gap: 15px;
   }
 }
