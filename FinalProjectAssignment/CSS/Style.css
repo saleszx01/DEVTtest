@@ -416,3 +416,25 @@ img[alt] {
   font-style: italic;
   font-size: 0.9em;
 }
+
+/* All figure caption config */
+
+figure {
+  max-width: 600px; /* or any width you want */
+  margin: 30px auto;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+figure figcaption {
+  margin-top: 8px;
+  font-style: italic;
+  color: #222;
+  font-size: 0.9em;
+  text-align: center;
+}
