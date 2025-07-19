@@ -1,50 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us - Rock It Up</title>
-  <link rel="stylesheet" href="../CSS/Style.css" />
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Contact Us</h1>
     <nav>
       <ul class="nav-list">
-        <li><a href="../Index-Page.html" tabindex="1">Home</a></li>
-        <li><a href="Getting-Started.html" tabindex="2">Getting Started</a></li>
-        <li><a href="The-Basics.html" tabindex="3">The Basics</a></li>
-        <li><a href="Practice-Schedule.html" tabindex="4">Practice Schedule</a></li>
-        <li><a href="Guitar-Trivia.html" tabindex="5">Guitar Trivia</a></li>
-        <li><a href="Contact-Us.html" tabindex="6" aria-current="page">Contact Us</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Getting-Started.html">Getting Started</a></li>
+        <li><a href="Basics.html">The Basics</a></li>
+        <li><a href="Practice.html">Practice</a></li>
+        <li><a href="Trivia.html">Guitar Trivia</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main class="centered">
     <h2>We'd love to hear from you!</h2>
-    <p>You can reach us by email at <a href="mailto:heitor.zoom@gmail.com">heitor.zoom@gmail.com</a> or by filling out the form below.</p>
+    <p>If you have any questions, suggestions, or feedback, please don't hesitate to reach out to us.</p>
 
-    <form aria-label="Contact form">
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required aria-required="true" /><br /><br />
+    <h3>Email</h3>
+    <p>support@guitarjourney.com</p>
 
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required aria-required="true" /><br /><br />
+    <h3>Phone</h3>
+    <p>+1 (555) 123-4567</p>
 
-      <label for="message">Your Message:</label><br />
-      <textarea id="message" name="message" rows="6" required aria-required="true"></textarea><br /><br />
+    <h3>Mailing Address</h3>
+    <p>123 Guitar Lane<br>Strumville, ST 98765<br>USA</p>
 
-      <input type="submit" value="Send" />
-    </form>
-
-    <div class="contact-image">
-      <img src="../images/Telephone.jpg" alt="Old telephone ilustration" />
-    </div>
+    <img src="images/Telephone.jpg" alt="Vintage Telephone" style="max-width: 300px; height: auto; margin-top: 30px; border-radius: 8px;">
   </main>
 
   <footer>
-    <p>&copy; 2025 Rock It Up. All rights reserved.</p>
+    <p>&copy; 2025 Guitar Journey. All rights reserved.</p>
   </footer>
 </body>
 </html>
