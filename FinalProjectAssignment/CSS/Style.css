@@ -251,16 +251,27 @@ img[alt] {
   margin: 40px auto;
 }
 
+/* Image styling inside basics grid */
 .basics-grid img {
   width: 100%;
+  max-width: 320px; /* limit max width */
   height: auto;
   border-radius: 8px;
   object-fit: contain;
+  justify-self: center;
+}
+
+/* Text container inside grid */
+.basics-grid > div {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #222;
 }
 
 /* Responsive stacking for mobile */
 @media (max-width: 700px) {
   .basics-grid {
     grid-template-columns: 1fr;
+    margin: 20px;
   }
 }
