@@ -108,7 +108,7 @@ img[alt] {
   background-color: #f5e6dc;
   padding: 15px;
   margin-bottom: 15px;
-  border-left: 4px solid #4B0000;
+  /* borda vermelha removida */
   border-radius: 8px;
 }
 
@@ -214,6 +214,16 @@ img[alt] {
   text-align: center;
   margin-top: 6px;
   font-style: italic;
+}
+
+/* Ajuste para que números da lista fiquem dentro do fundo colorido */
+.basics-grid article ol {
+  background-color: #fef7e0; /* mesmo fundo que o artigo */
+  padding: 10px 20px;
+  border-radius: 8px;
+  list-style-position: inside; /* garante que os números fiquem dentro do fundo */
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Fundo para parágrafos do The Basics */
