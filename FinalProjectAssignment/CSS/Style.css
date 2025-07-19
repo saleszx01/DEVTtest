@@ -44,8 +44,10 @@ header h1 {
   border: 2px solid #4B0000;
 }
 
-.nav-list a:hover {
+.nav-list a:hover,
+.nav-list a:focus {
   background-color: firebrick;
+  outline: none;
 }
 
 /* Footer */
@@ -67,32 +69,133 @@ img[alt] {
   outline-offset: 2px;
 }
 
-/* --------------------------- */
-/* Custom CSS for The Basics page */
-/* --------------------------- */
+/* Centered text helper */
+.centered {
+  text-align: center;
+}
 
-/* Basics grid container uses grid-template-columns and grid-template-rows */
+/* Intro sections - for main page */
+.intro {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.intro img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Equipment lists for Getting Started page */
+.equipment-essential {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.equipment-texts {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.equipment-item {
+  background-color: #f5e6dc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #4B0000;
+  border-radius: 8px;
+}
+
+.equipment-item span {
+  font-size: 1em;
+  color: #222;
+}
+
+/* Images in equipment-essential */
+.equipment-essential img {
+  flex: 1 1 280px;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Equipment list */
+.equipment-list {
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.equipment-list li {
+  margin-bottom: 15px;
+}
+
+.equipment-list .equipment-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.equipment-list .equipment-item img {
+  max-width: 180px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Links in "Where to Buy" section */
+.centered ul {
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 500px;
+  margin: 10px auto 30px;
+}
+
+.centered ul li {
+  margin: 10px 0;
+}
+
+.centered ul li a {
+  color: #4B0000;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.centered ul li a:hover,
+.centered ul li a:focus {
+  color: firebrick;
+  outline: none;
+}
+
+/* The Basics page grid */
 .basics-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;  /* Two equal columns */
-  grid-template-rows: auto;        /* Rows adjust height automatically */
-  column-gap: 30px;                /* Space between columns */
-  row-gap: 20px;                  /* Space between rows */
-  align-items: center;             /* Vertically center grid items */
+  grid-template-rows: auto;
+  column-gap: 30px;
+  row-gap: 20px;
+  align-items: center;
   max-width: 900px;
   margin: 40px auto;
 }
 
-/* Article text styling */
 .basics-grid article {
   font-size: 1em;
   line-height: 1.5;
   color: #222;
 }
 
-/* Figure and images styling */
 .basics-grid figure {
-  margin: 0; /* Remove default figure margin */
+  margin: 0;
 }
 
 .basics-grid figure img {
@@ -103,7 +206,6 @@ img[alt] {
   display: block;
 }
 
-/* Figcaption styling */
 .basics-grid figure figcaption {
   font-size: 0.9em;
   color: #555;
@@ -112,12 +214,34 @@ img[alt] {
   font-style: italic;
 }
 
-/* Responsive: Stack content vertically on small screens */
+/* Responsive adjustments */
 @media (max-width: 700px) {
   .basics-grid {
-    grid-template-columns: 1fr; /* Single column */
-    grid-template-rows: auto auto; /* Two rows */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
     column-gap: 0;
     row-gap: 15px;
+  }
+
+  .equipment-essential {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .equipment-essential img {
+    max-width: 100%;
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .equipment-list .equipment-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .equipment-list .equipment-item img {
+    max-width: 100%;
+    width: 180px;
+    margin: 10px 0 0 0;
   }
 }
