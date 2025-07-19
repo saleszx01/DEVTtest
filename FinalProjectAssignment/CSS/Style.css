@@ -1,3 +1,4 @@
+
 /* Reset and Base */
 * {
   margin: 0;
@@ -179,22 +180,22 @@ img[alt] {
 /* The Basics page grid with explicit grid properties */
 .basics-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 columns */
-  grid-template-rows: auto auto; /* 2 rows - rows height adapt to content */
-  grid-column-gap: 20px; /* horizontal gap */
-  grid-row-gap: 30px; /* vertical gap */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
   max-width: 900px;
   margin: 40px auto;
   align-items: center;
 }
 
 .basics-grid figure {
-  width: 280px; /* limita largura da figura */
-  margin: 0 auto; /* centraliza figura na célula */
+  width: 280px;
+  margin: 0 auto;
 }
 
 .basics-grid figure img {
-  max-width: 100%; /* nunca ultrapassa a largura da figura */
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
   object-fit: contain;
@@ -204,8 +205,8 @@ img[alt] {
 /* Special grid for single column content with gap */
 .basics-grid-single {
   display: grid;
-  grid-template-columns: 1fr; /* single column */
-  grid-template-rows: auto auto; /* rows adapt to content */
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
   grid-row-gap: 20px;
   max-width: 900px;
   margin: 40px auto;
@@ -232,7 +233,7 @@ img[alt] {
 @media (max-width: 700px) {
   .basics-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto; /* adapting rows for stacked */
+    grid-template-rows: auto auto auto auto;
     grid-column-gap: 0;
     grid-row-gap: 20px;
   }
@@ -261,5 +262,61 @@ img[alt] {
     max-width: 100%;
     width: 180px;
     margin-top: 10px;
+  }
+}
+
+/* Practice Schedule Table - Complex Table Styling */
+.practice-schedule {
+  max-width: 1000px;
+  margin: 40px auto;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff8ee;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.practice-schedule caption {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #4B0000;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.practice-schedule th,
+.practice-schedule td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.practice-schedule th {
+  background-color: #f0d7cf;
+  color: #4B0000;
+}
+
+.practice-schedule td {
+  background-color: #fffef8;
+}
+
+.practice-schedule tr:nth-child(even) td {
+  background-color: #fdf3e6;
+}
+
+.practice-schedule td[colspan] {
+  background-color: #fae1d8;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .practice-schedule {
+    font-size: 0.9em;
+  }
+
+  .practice-schedule caption {
+    font-size: 1.2em;
+    padding: 10px;
   }
 }
