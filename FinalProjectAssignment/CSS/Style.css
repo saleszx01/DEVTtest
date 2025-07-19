@@ -108,7 +108,7 @@ img[alt] {
   background-color: #f5e6dc;
   padding: 15px;
   margin-bottom: 15px;
-  /* borda vermelha removida */
+  border-left: 4px solid #4B0000;
   border-radius: 8px;
 }
 
@@ -176,73 +176,57 @@ img[alt] {
   outline: none;
 }
 
-/* The Basics page grid */
+/* The Basics page grid with explicit grid properties */
 .basics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 30px 20px;
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  grid-template-rows: auto auto; /* 2 rows - rows height adapt to content */
+  grid-column-gap: 20px; /* horizontal gap */
+  grid-row-gap: 30px; /* vertical gap */
   max-width: 900px;
   margin: 40px auto;
   align-items: center;
 }
 
-.basics-grid article {
-  font-size: 1em;
-  line-height: 1.5;
-  color: #222;
-  padding: 15px;
-  border-radius: 8px;
-  background-color: #fef7e0;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+/* Special grid for single column content with gap */
+.basics-grid-single {
+  display: grid;
+  grid-template-columns: 1fr; /* single column */
+  grid-template-rows: auto auto; /* rows adapt to content */
+  grid-row-gap: 20px;
+  max-width: 900px;
+  margin: 40px auto;
 }
 
-.basics-grid figure {
-  margin: 0;
-}
-
-.basics-grid figure img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: contain;
-  display: block;
-}
-
-.basics-grid figure figcaption {
-  font-size: 0.9em;
-  color: #555;
-  text-align: center;
-  margin-top: 6px;
-  font-style: italic;
-}
-
-/* Ajuste para que números da lista fiquem dentro do fundo colorido */
-.basics-grid article ol {
-  background-color: #fef7e0; /* mesmo fundo que o artigo */
-  padding: 10px 20px;
-  border-radius: 8px;
-  list-style-position: inside; /* garante que os números fiquem dentro do fundo */
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-/* Fundo para parágrafos do The Basics */
+/* Background for content */
 .content-bg {
   background-color: #fef7e0;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 0 6px rgba(0,0,0,0.1);
-  max-width: 900px;
-  margin: 20px auto;
   color: #222;
   line-height: 1.5;
 }
 
-/* Responsive adjustments */
+/* Lists with numbers fully inside background */
+.numbers-in-bg {
+  list-style-position: inside;
+  padding-left: 1.2em;
+  margin-bottom: 1em;
+}
+
+/* Responsive */
 @media (max-width: 700px) {
   .basics-grid {
     grid-template-columns: 1fr;
-    grid-gap: 20px 15px;
+    grid-template-rows: auto auto auto auto; /* adapting rows for stacked */
+    grid-column-gap: 0;
+    grid-row-gap: 20px;
+  }
+
+  .basics-grid-single {
+    grid-template-columns: 1fr;
+    grid-row-gap: 15px;
   }
 
   .equipment-essential {
