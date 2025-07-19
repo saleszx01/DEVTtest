@@ -188,6 +188,19 @@ img[alt] {
   align-items: center;
 }
 
+.basics-grid figure {
+  width: 280px; /* limita largura da figura */
+  margin: 0 auto; /* centraliza figura na célula */
+}
+
+.basics-grid figure img {
+  max-width: 100%; /* nunca ultrapassa a largura da figura */
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  display: block;
+}
+
 /* Special grid for single column content with gap */
 .basics-grid-single {
   display: grid;
